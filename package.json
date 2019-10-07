@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/supergiulab/frontend-boot/issues"
   },
-  "homepage": "https://github.com/supergiulab/frontend-boot#readme"
+  "homepage": "https://github.com/supergiulab/frontend-boot#readme",
+  "devDependencies": {
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  }
 }
