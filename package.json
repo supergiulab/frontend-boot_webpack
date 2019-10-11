@@ -1,5 +1,5 @@
 {
-  "name": "frontend-boot",
+  "name": "frontend-boot_webpack",
   "version": "1.0.0",
   "description": "Frontend files for development and production",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/supergiulab/frontend-boot.git"
+    "url": "git+https://github.com/supergiulab/frontend-boot_webpack.git"
   },
   "author": "SuPerGiu",
   "license": "ISC",
