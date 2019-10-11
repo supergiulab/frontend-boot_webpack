@@ -20,6 +20,22 @@ module.exports = {
 		extesions: ['.js', '.ts']
 	},
 
+	module: {
+		rules: [
+			{
+				// Transpile ES6+ to ES5
+				test: [/.js$/],
+				exclude: /(node_modules)/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['@babel/preset-env']
+					}
+				}
+			}
+		]
+	},
+
 	// Default mode for Webpack is production.
 	// Depending on mode Webpack will apply different things
 	// on final bundle. For now we don't need production's JavaScript 
