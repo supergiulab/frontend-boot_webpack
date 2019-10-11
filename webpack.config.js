@@ -15,6 +15,11 @@ module.exports = {
 		filename: 'scripts.js'
 	},
 
+	// Resolve common extensions
+	resolve: {
+		extesions: ['.js', '.ts']
+	},
+
 	// Default mode for Webpack is production.
 	// Depending on mode Webpack will apply different things
 	// on final bundle. For now we don't need production's JavaScript 
