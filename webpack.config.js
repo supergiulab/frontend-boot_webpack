@@ -6,19 +6,17 @@ const path = require('path');
 module.exports = {
 
 	// Path to your entry point. From this file Webpack will begin his work
-	entry: './app.js',
+	entry: './assets/js/app.js',
 
 	// Path and filename of your result bundle.
 	// Webpack will bundle all JavaScript into this file
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'scripts.js'
+		filename: 'app.js'
 	},
 
 	// Resolve common extensions
-	resolve: {
-		extesions: ['.js', '.ts']
-	},
+	resolve: { extensions: ['.js', '.ts'] },
 
 	module: {
 		rules: [
