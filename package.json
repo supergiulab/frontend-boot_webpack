@@ -4,8 +4,8 @@
   "description": "Frontend files for development and production",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --config webpack.config.js",
-    "start": "webpack-dev-server"
+    "dev": "rimraf dist && webpack --config webpack.config.js",
+    "start": "webpack-dev-server --client-log-level silent"
   },
   "repository": {
     "type": "git",

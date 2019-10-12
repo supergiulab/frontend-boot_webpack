@@ -1,6 +1,5 @@
 // Webpack uses this to work with directories
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 // This is main configuration object.
 // Here you write different options and tell Webpack what to do
@@ -19,10 +18,6 @@ module.exports = {
 	// Resolve common extensions
 	resolve: { extensions: ['.js', '.ts'] },
 
-	plugins: [
-		new CleanWebpackPlugin(),
-	],
-
 	module: {
 		rules: [
 			{
@@ -38,6 +33,9 @@ module.exports = {
 			}
 		]
 	},
+
+	plugins: [
+	],
 
 	// Default mode for Webpack is production.
 	// Depending on mode Webpack will apply different things

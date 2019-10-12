@@ -1,6 +1,6 @@
 export class Header {
 	constructor() {
-		console.log(`This is header constructor`);
+		console.log(`This is header constructor v2`);
 	}
 
 	getFirstHeading() {
