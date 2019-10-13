@@ -1,5 +1,6 @@
 // Webpack uses this to work with directories
 const path = require('path');
+const MiniCssExctractPlugin = require('mini-css-extract-plugin');
 
 // This is main configuration object.
 // Here you write different options and tell Webpack what to do
@@ -40,6 +41,12 @@ module.exports = {
 				// The first loader will be applied after others
 				use: [
 					{
+						// After all CSS loaders we use plugin to do his work.
+						// It gets all transformed CSS and extracts it into separate
+						// single bundled file
+						loader: MiniCssExctractPlugin.loader
+					},
+					{
 						// This loader resolves url() and @imports inside CSS
 						loader: "css-loader",
 					},
@@ -49,7 +56,7 @@ module.exports = {
 					},
 					{
 						// First we transform SASS to standard CSS
-						loader: "sass-loader"
+						loader: "sass-loader",
 						options: {
 							implementation: require("sass")
 						}
@@ -60,11 +67,14 @@ module.exports = {
 	},
 
 	plugins: [
+		new MiniCssExctractPlugin({
+			filename: "style.css"
+		})
 	],
 
 	// Default mode for Webpack is production.
 	// Depending on mode Webpack will apply different things
 	// on final bundle. For now we don't need production's JavaScript 
 	// minifying and other thing so let's set mode to development
-	mode: 'development'
+	mode: 'production'
 };

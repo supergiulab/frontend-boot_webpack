@@ -1,3 +1,4 @@
+import '../css/style.scss';
 import { Header } from './mods/Header';
 let header = new Header();
 
