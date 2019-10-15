@@ -1,6 +1,6 @@
 // Webpack uses this to work with directories
 const path = require('path');
-const MiniCssExctractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // This is main configuration object.
 // Here you write different options and tell Webpack what to do
@@ -44,7 +44,7 @@ module.exports = {
 						// After all CSS loaders we use plugin to do his work.
 						// It gets all transformed CSS and extracts it into separate
 						// single bundled file
-						loader: MiniCssExctractPlugin.loader
+						loader: MiniCssExtractPlugin.loader
 					},
 					{
 						// This loader resolves url() and @imports inside CSS
@@ -67,7 +67,7 @@ module.exports = {
 	},
 
 	plugins: [
-		new MiniCssExctractPlugin({
+		new MiniCssExtractPlugin({
 			filename: "style.css"
 		})
 	],
