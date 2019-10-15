@@ -72,9 +72,22 @@ module.exports = {
 		})
 	],
 
+	// Set webpack-dev-server options
+	// publicPath: bundled files path
+	// contentBase: [array] where to watch updated files
+	devServer: {
+		port: 8080,
+		publicPath: '/dist/',
+		contentBase: [
+			path.join(__dirname, '/'),
+			path.join(__dirname, 'assets')
+		],
+		watchContentBase: true
+	},
+
 	// Default mode for Webpack is production.
 	// Depending on mode Webpack will apply different things
 	// on final bundle. For now we don't need production's JavaScript 
 	// minifying and other thing so let's set mode to development
-	mode: 'production'
+	mode: 'development'
 };
